@@ -1,6 +1,6 @@
 <?php
   class Core {
-    // Función para registrar el controlador actual, el método invocado, y otros parámetros
+    // Función para registrar el controlador actual, el método invocado y sus parámetros
     public function setController($currentController = 'MasterController', $currentMethod = 'login', $params = []) {
       $url = $this->getUrl();
 

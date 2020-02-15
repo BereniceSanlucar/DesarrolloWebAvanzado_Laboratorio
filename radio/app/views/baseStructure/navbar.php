@@ -17,7 +17,6 @@
     <nav id="container-navbar">
         <h2 id="container-left">
             <?php 
-                session_start();
                 echo $_SESSION['username']
             ?>
         <h2>
