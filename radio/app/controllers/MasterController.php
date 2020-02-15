@@ -72,14 +72,39 @@
         // Función para construir el controlador de registro de estaciones
         public function addStation() {
             $init = new Core();
-            $init->setController('AddStationController', 'addStation');
+            $init->setController('StationController', 'addStation');
+        }
+
+        // Función para prellenar el controlador de edición de estaciones
+        public function edit($id) {
+            $init = new Core();
+            $init->setController('StationController', 'edit', $id);
+        }
+
+        // Función para construir el controlador de edición de estaciones
+        public function editStation($id) {
+            $init = new Core();
+            $init->setController('StationController', 'editStation', $id);
+        }
+
+        // Función para llamar al controlador de eliminación de estaciones
+        public function delete($id) {
+            $init = new Core();
+            $init->setController('StationController', 'delete', $id);
         }
 
         // Función para destruir la sesión del usuario
         public function logout() {
-            unset($_SESSION['username']);
+            $_SESSION = array();
+            if (ini_get("session.use_cookies")) {
+                $params = session_get_cookie_params();
+                setcookie(session_name(), '', time() - 42000,
+                    $params["path"], $params["domain"],
+                    $params["secure"], $params["httponly"]
+                );
+            }
             session_destroy();
-            redirect("welcome");
+            redirect("login");
         }
     }
 ?>

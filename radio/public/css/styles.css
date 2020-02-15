@@ -74,6 +74,10 @@ input[type=url]:focus {
     border: 1px solid #4E587B;
 }
 
+button:disabled {
+    color: dimgray;
+}
+
 #header {
     background-color: #222f5b;
     margin-top: 0em;
@@ -104,6 +108,11 @@ input[type=url]:focus {
     text-align: center;
 }
 
+#section-dashboard {
+    margin: 3%;
+    text-align: center;
+}
+
 #footer {
     text-align: center;
 }
@@ -128,6 +137,14 @@ input[type=url]:focus {
     border-radius: 0.35em;
     font-size: 22px;
     border-bottom: 1px solid rgba(34,47,91);
+}
+
+#title-station {
+    position: relative;
+    font-size: 22px;
+    width: 750;
+    padding: 20px 0px;
+    text-align: center;
 }
 
 #signup-link {
@@ -195,13 +212,17 @@ input[type=url]:focus {
     float: left;
 }
 
-#container-dashboard {
+.container-dashboard {
+    background-color: #222f5b;
     position: relative;
-    top: 30%;
-    margin: auto;
-    width: 440px;
-    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 800px;
+    height: 225px;
     border-radius: 0.35em;
+    box-shadow: 0 3px 10px 0 rgba(34,47,91);
     text-align: center;
 }
 
@@ -223,6 +244,54 @@ input[type=url]:focus {
 .lock {
     position: relative;
     top: 2px;
+}
+
+.output {
+    margin: auto;
+    width: 700px;
+    padding: 8px 0px;
+    text-align: left;
+}
+
+.output-addon {
+    float: left;
+    padding: 4px 8px;
+}
+
+.output-container {
+    margin: auto;
+    width: 100%;
+    padding: 12px 8px;
+}
+
+.output-left {
+    float: left;
+    text-align: left;
+}
+
+.output-right {
+    float: right;
+    text-align: right;
+    padding: 0px 8px;
+}
+
+.edit {
+    background-color: #222f5b;
+    color: white;
+    border-color: #222f5b;
+}
+
+.delete {
+    background-color: #222f5b;
+    color: white;
+    border-color: #222f5b;
+    float: left;
+    text-align: left;
+    padding: 0px 0px;
+}
+
+a {
+    color: white;
 }
 
 .input {
@@ -263,6 +332,20 @@ input[type=url]:focus {
 .invalid-feedback {
     font-size: small;
     color: #9c0000;
+}
+
+p {
+    color: white;
+    margin: 0;
+    padding: 6px 0px;
+    font-weight: normal;
+    font-size: small;
+}
+
+h3 {
+    color: white;
+    margin: 0;
+    padding: 6px 0px;
 }
 
 *:focus {

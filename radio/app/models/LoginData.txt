@@ -1,1 +1,0 @@
-a:3:{s:5:"email";s:22:"solecito1995@gmail.com";s:8:"username";s:6:"Sole95";s:8:"password";s:60:"$2y$10$GlHaiGrXKEelUzMpBMLcxOXQ/gAF4F/g4zLuHpODyCyM/oxQyZM2O";}

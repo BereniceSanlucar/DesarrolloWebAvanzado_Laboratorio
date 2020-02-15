@@ -46,7 +46,7 @@
                 <?php echo $data['signupMessage']?>
                 <a href = "<?php echo $data['signupLink']?>">
                     <br>
-                        <button id = "signup-link"><?php echo $data['signupButton']?></button>
+                        <button id ="signup-link" ><?php echo $data['signupButton']?></button>
                     </br>
                 </a>
             </div>

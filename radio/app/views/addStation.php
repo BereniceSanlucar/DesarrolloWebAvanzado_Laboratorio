@@ -23,33 +23,63 @@
                 <i class = "material-icons"><?php echo $data['radioIcon']?></i> 
                 <?php echo $data['title']?>
             </div>
-            <form action="<?php echo $data['addStationAction']?>" method="POST">
+            <form method="POST" action="<?php 
+                if(empty($data['station'])) {
+                    echo $data['addStationAction'];
+                } else {
+                    echo URLROOT; ?>/editStation/<?php echo $data['station']->stationID;
+                }
+            ?>">
                 <div class = "input">
                     <div class = "input-addon">
                         <i class = "material-icons"><?php echo $data['subjectIcon']?></i>
                     </div>
-                    <input name = "subject" placeholder = "Subject" type = "text" autocomplete = "off">
+                    <input name = "subject" placeholder = "Subject" type = "text" autocomplete = "off" value ="<?php 
+                        if(empty($data['station'])) {
+                            echo '';
+                        } else {
+                            echo $data['station']->subject;
+                        }
+                    ?>">
                 </div>
                 <span class="invalid-feedback"><?php echo $data['subjectError']?></span>
                 <div class = "input">
                     <div class = "input-addon">
                         <i class = "material-icons"><?php echo $data['dateIcon']?></i>
                     </div>
-                    <input name = "date" placeholder = "Date: mm/dd/yyyy" type = "text" autocomplete = "off"> 
+                    <input name = "date" placeholder = "Date: mm/dd/yyyy" type = "text" autocomplete = "off" value ="<?php 
+                        if(empty($data['station'])) {
+                            echo '';
+                        } else {
+                            echo $data['station']->date;
+                        }
+                    ?>"> 
                 </div>
                 <span class="invalid-feedback"><?php echo $data['dateError']?></span>
                 <div class = "input">
                     <div class = "input-addon">
                         <i class = "material-icons"><?php echo $data['timeIcon']?></i>
                     </div>
-                    <input name = "time" placeholder = "Time: 21:00" type = "text" autocomplete = "off">
+                    <input name = "time" placeholder = "Time: 21:00" type = "text" autocomplete = "off" value ="<?php
+                        if(empty($data['station'])) {
+                            echo '';
+                        } else {
+                            echo $data['station']->time;
+                        }
+                    ?>">
                 </div>
                 <span class="invalid-feedback"><?php echo $data['timeError']?></span>
                 <div class = "input">
                     <div class = "input-addon">
                         <i class = "material-icons"><?php echo $data['mountPointIcon']?></i>
                     </div>
-                    <input name = "mountPoint" placeholder = "Mount Point" type = "url" autocomplete = "off">
+                    <input name = "mountPoint" placeholder = "Mount Point" type = "url" autocomplete = "off" value ="<?php 
+                        if(empty($data['station'])) {
+                            echo '';
+                        } else {
+                            echo $data['station']->mountPoint;
+                        }
+                    ?>">
                 </div>
                 <span class="invalid-feedback"><?php echo $data['mountPointError']?></span>
                 <div>

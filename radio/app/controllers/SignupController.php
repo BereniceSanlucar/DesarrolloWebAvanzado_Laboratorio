@@ -48,8 +48,8 @@
                         $this->data['emailError'] = 'This email is already taken.';
                     } elseif($this->userModel->findUsername($temp['username'])) {
                         $this->data['usernameError'] = 'This username is already taken.';
-                    } elseif(strlen($temp['password']) < 8) {
-                        $this->data['passwordError'] = 'Password must have at least 8 characters.';
+                    } elseif(strlen($temp['password']) != 8) {
+                        $this->data['passwordError'] = 'Password must have 8 characters.';
                     } else {
                         $temp['password'] = password_hash($temp['password'], PASSWORD_DEFAULT);
                         if($this->userModel->saveUser($temp)) {
